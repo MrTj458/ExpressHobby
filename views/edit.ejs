@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ./partials/head %>
+  </head>
+  <body>
+    <header>
+      <% include ./partials/header %>
+    </header>
+    <div class="container">
+      <% var url = "/games/" + game.id + "?_method=PUT" %>
+      <form method="POST" action=<%= url %>>
+        <input required name="title" value=<%= game.title %> />
+        <a href="/games" class="btn red">Cancel</a>
+        <button class="btn">Save</button>
+      </form>
+    </div>
+  </body>
+</html>
